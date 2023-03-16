@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Port Operations </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="logo"><img src="./images/wlogo.png" width="310" height="300"></div>
+
+    <style>
+        .logo {
+            /* margin-inline: 20%; */
+            margin-inline: 20%;
+            /* background: #ffffff16; */
+        }
+    </style>
+    <div class="form">
+        <input type="password" name="" placeholder=" Enter the password" id="pass" value="">
+        <input type="checkbox" onclick="myfunction()" placeholder="show password">
+        <button class="btn-i2" type="submit" name="" value="ENTER" onclick="validate()"> ENTER </button>
+    </div>
+
+    <div>
+        <p id="length"></p>
+    </div>
+
+    <script>
+
+        function myfunction() {
+            var x = document.getElementById("pass");
+            if (x.type === "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+
+        function validate() {
+            var password = document.getElementById("pass");
+            var length = document.getElementById("length");
+
+            if (password.value == 5) {
+                // alert("login succesfull");
+                window.location.replace("index2.html")
+                return false;
+            }
+            else {
+                alert("wrong password");
+
+            }
+        }
+    </script>
+</body>
+
+</html>
